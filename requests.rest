@@ -19,6 +19,10 @@ Content-Type: application/json
 
 ###
 
+DELETE {{baseUrl}}/subscribers
+
+###
+
 GET {{baseUrl}}/subscribers/{{id}}
 
 ###

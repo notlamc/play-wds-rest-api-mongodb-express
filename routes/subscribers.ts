@@ -59,6 +59,20 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.delete("/", async (_req, res) => {
+  try {
+    await SubscriberModel.deleteMany();
+
+    res.json({
+      message: "Subscribers deleted.",
+    });
+  } catch (err) {
+    res.status(500).json({
+      message: err.message,
+    });
+  }
+});
+
 router.get("/:id", getSubscriberMiddleware, async (_req, res) => {
   try {
     res.json(res.locals["subscriber"]);
