@@ -1,0 +1,38 @@
+@baseUrl=http://localhost:3000
+@name=Craig Malton
+@subscribedToChannel=Web Dev Simplified
+@id=6423f1977df05a6a3cbdc532
+
+###
+
+GET {{baseUrl}}/subscribers
+
+###
+
+POST {{baseUrl}}/subscribers
+Content-Type: application/json
+
+{
+  "name": "{{name}}",
+  "subscribedToChannel": "{{subscribedToChannel}}"
+}
+
+###
+
+GET {{baseUrl}}/subscribers/{{id}}
+
+###
+
+PATCH {{baseUrl}}/subscribers/{{id}}
+Content-Type: application/json
+
+{
+  "name": "{{name}}",
+  "subscribedToChannel": "{{subscribedToChannel}}"
+}
+
+###
+
+DELETE {{baseUrl}}/subscribers/{{id}}
+
+###
